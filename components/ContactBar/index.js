@@ -1,7 +1,7 @@
 import styles from "./ContactBar.module.css";
 
 const Link = ({ href, title }) => (
-  <a className={styles.link} href={`http://www.${href}`} target="_blank">
+  <a className={styles.link} href={`http://www.${href}`} target="_blank" rel="noreferrer">
     {title}
   </a>
 );
