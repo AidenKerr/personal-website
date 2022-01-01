@@ -1,0 +1,36 @@
+.experience-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.experience-title h2,
+.experience-title h4 {
+  padding-left: 10px;
+  margin: 0;
+}
+
+.experience h5 {
+  text-align: left;
+  padding-left: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.experience ul {
+  text-align: left;
+  padding-left: 90px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 600px) {
+  .experience ul {
+    padding-left: 20px;
+  }
+}
+
+.experience ul li {
+  padding-top: 5px;
+}

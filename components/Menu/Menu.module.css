@@ -1,0 +1,30 @@
+.menu {
+  flex-grow: 1;
+  text-align: left;
+  flex-basis: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu {
+    text-align: center;
+    flex-grow: 0;
+  }
+
+  .menu ul {
+    text-align: center;
+  }
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  padding: 5px 0;
+}
+
+.menu ul li:hover {
+  text-decoration: underline;
+}
