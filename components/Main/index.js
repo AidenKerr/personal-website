@@ -9,8 +9,8 @@ export function Main({ children }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Aiden Kerr</title>
-        <meta name="description" content="Aiden Kerr's Personal Website" />
+        <title>Aiden Kerr | Software Developer</title>
+        <meta name="description" content="Aiden Kerr | Software Developer" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>

@@ -9,7 +9,12 @@ export default function Experience() {
     <Main>
       <div className={styles.experience}>
         <div className={styles["experience-title"]}>
-          <Image src={RDCImage} height={65} width={65} />
+          <Image
+            src={RDCImage}
+            height={65}
+            width={65}
+            alt="Logo for Realtor.com"
+          />
           <div>
             <h2>Realtor.com</h2>
             <h4>Software Engineer Co-op</h4>

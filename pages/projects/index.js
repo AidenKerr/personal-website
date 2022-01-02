@@ -7,12 +7,12 @@ import RedditImage from "../../public/images/reddit.png";
 import TwentyQImage from "../../public/images/20Q.png";
 import GeneticImage from "../../public/images/genetic.png";
 
-const Project = ({ image, title, repos, skills, points }) => {
+const Project = ({ image, imageAlt, title, repos, skills, points }) => {
   return (
     <div className={styles.project}>
       <div className={styles["project-title"]}>
         <div className={styles["project-logo"]}>
-          <Image src={image} height={65} width={65} />
+          <Image src={image} height={65} width={65} alt={imageAlt} />
         </div>
         <div>
           <h3>{title}</h3>
@@ -69,6 +69,7 @@ export default function Projects() {
       <div className={styles.projects}>
         <Project
           image={RedditImage}
+          imageAlt={"Logo for Kerrdit"}
           title={"Kerrdit (Reddit Clone)"}
           repos={{
             front: "https://github.com/AidenKerr/Kerrdit-frontend",
@@ -82,6 +83,7 @@ export default function Projects() {
         />
         <Project
           image={TwentyQImage}
+          imageAlt={"Logo for twenty Q style game editor"}
           title={"20Q-style Game Editor"}
           repos={{
             source: "https://github.com/AidenKerr/20Q-Designer",
@@ -95,6 +97,7 @@ export default function Projects() {
         />
         <Project
           image={GeneticImage}
+          imageAlt={"Logo for Genetic Algorithm Visualization"}
           title={"Genetic Algorithm Visualization By Colour"}
           repos={{
             front: "https://github.com/AidenKerr/genetic-v2",

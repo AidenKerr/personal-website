@@ -13,6 +13,7 @@ export default function Home() {
         width={150}
         height={150}
         className={styles.headshot}
+        alt="Headshot of Aiden Kerr"
       />
       <h1 className={styles.title}>Aiden Kerr</h1>
       <ContactBar />

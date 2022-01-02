@@ -12,6 +12,7 @@ export default function About() {
         width={80}
         height={80}
         className={styles.headshot}
+        alt="Headshot of Aiden Kerr"
       />
       <h2>Hi. I am a software developer.</h2>
       <p>
