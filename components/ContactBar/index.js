@@ -13,7 +13,7 @@ export function ContactBar() {
       {" | "}
       <Link href="github.com/aidenkerr" title={"Github"} />
       {" | "}
-      <Link href="aidenkerr.com/files/Resume_Dec_2021.pdf" title={"Resume"} />
+      <Link href="aidenkerr.com/files/Aiden_Kerr_Resume_Jan_2021.pdf" title={"Resume"} />
     </div>
   );
 }
