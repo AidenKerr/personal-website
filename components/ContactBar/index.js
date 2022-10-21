@@ -1,7 +1,12 @@
-import styles from "./ContactBar.module.css";
+import styles from './ContactBar.module.css';
 
 const Link = ({ href, title }) => (
-  <a className={styles.link} href={`http://www.${href}`} target="_blank" rel="noreferrer">
+  <a
+    className={styles.link}
+    href={`http://www.${href}`}
+    target="_blank"
+    rel="noreferrer"
+  >
     {title}
   </a>
 );
@@ -9,11 +14,14 @@ const Link = ({ href, title }) => (
 export function ContactBar() {
   return (
     <div>
-      <Link href={"linkedin.com/in/aidenkerr"} title={"LinkedIn"} />
-      {" | "}
-      <Link href="github.com/aidenkerr" title={"Github"} />
-      {" | "}
-      <Link href="aidenkerr.com/files/Aiden_Kerr_Resume_Jan_2021.pdf" title={"Resume"} />
+      <Link href={'linkedin.com/in/aidenkerr'} title={'LinkedIn'} />
+      {' | '}
+      <Link href="github.com/aidenkerr" title={'Github'} />
+      {' | '}
+      <Link
+        href="aidenkerr.com/files/Aiden_Kerr_Resume_August_2022.pdf"
+        title={'Resume'}
+      />
     </div>
   );
 }
