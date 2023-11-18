@@ -33,7 +33,7 @@ export default function About() {
       <p>
         I am currently looking for internship positions. In particular, I am
         interested in software development positions regarding computer graphics
-        and game development.
+        and/or game development.
       </p>
       <p>
         If you would like to get in touch, feel free to contact me on{' '}
