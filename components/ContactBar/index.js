@@ -19,7 +19,7 @@ export function ContactBar() {
       <Link href="github.com/aidenkerr" title={'Github'} />
       {' | '}
       <Link
-        href="aidenkerr.com/files/Aiden_Kerr_Resume_August_2022.pdf"
+        href="aidenkerr.com/files/Aiden_Kerr_Resume_Fall_2023.pdf"
         title={'Resume'}
       />
     </div>

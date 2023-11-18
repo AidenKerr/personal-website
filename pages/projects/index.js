@@ -1,17 +1,17 @@
-import Image from "next/image";
-import { Main } from "../../components/Main";
-import styles from "./Projects.module.css";
-import { SiGithub } from "react-icons/si";
+import Image from 'next/image';
+import { Main } from '../../components/Main';
+import styles from './Projects.module.css';
+import { SiGithub } from 'react-icons/si';
 
-import RedditImage from "../../public/images/reddit.png";
-import TwentyQImage from "../../public/images/20Q.png";
-import GeneticImage from "../../public/images/genetic.png";
+import RedditImage from '../../public/images/reddit.png';
+import TwentyQImage from '../../public/images/20Q.png';
+import GeneticImage from '../../public/images/genetic.png';
 
 const Project = ({ image, imageAlt, title, repos, skills, points }) => {
   return (
     <div className={styles.project}>
-      <div className={styles["project-title"]}>
-        <div className={styles["project-logo"]}>
+      <div className={styles['project-title']}>
+        <div className={styles['project-logo']}>
           <Image src={image} height={65} width={65} alt={imageAlt} />
         </div>
         <div>
@@ -38,25 +38,25 @@ const Repos = ({ repos }) => {
         <span>
           <a href={repos.source}>
             <SiGithub />
-          </a>{" "}
-          Source Code{" "}
+          </a>{' '}
+          Source Code{' '}
         </span>
       )}
       {repos.front && (
         <span>
           <a href={repos.front}>
             <SiGithub />
-          </a>{" "}
-          Frontend{" "}
+          </a>{' '}
+          Frontend{' '}
         </span>
       )}
       {repos.back && (
         <span>
-          |{" "}
+          |{' '}
           <a href={repos.back}>
             <SiGithub />
-          </a>{" "}
-          Backend{" "}
+          </a>{' '}
+          Backend{' '}
         </span>
       )}
     </h5>
@@ -69,43 +69,43 @@ export default function Projects() {
       <div className={styles.projects}>
         <Project
           image={RedditImage}
-          imageAlt={"Logo for Kerrdit"}
-          title={"Kerrdit (Reddit Clone)"}
+          imageAlt={'Logo for Kerrdit'}
+          title={'Kerrdit (Reddit Clone)'}
           repos={{
-            front: "https://github.com/AidenKerr/Kerrdit-frontend",
-            back: "https://github.com/AidenKerr/Kerrdit-backend",
+            front: 'https://github.com/AidenKerr/Kerrdit-frontend',
+            back: 'https://github.com/AidenKerr/Kerrdit-backend',
           }}
-          skills={"React, MySQL, Node.js, Express"}
+          skills={'React, MySQL, Node.js, Express'}
           points={[
             "Used React with Material-UI to build responsive website similar to Reddit's layout.",
-            "Utilized Express to read/write from a MySQL database to allow posting, voting, and more.",
+            'Utilized Express to read/write from a MySQL database to allow posting, voting, and more.',
           ]}
         />
         <Project
           image={TwentyQImage}
-          imageAlt={"Logo for twenty Q style game editor"}
-          title={"20Q-style Game Editor"}
+          imageAlt={'Logo for twenty Q style game editor'}
+          title={'20Q-style Game Editor'}
           repos={{
-            source: "https://github.com/AidenKerr/20Q-Designer",
+            source: 'https://github.com/AidenKerr/20Q-Designer',
           }}
-          skills={""}
+          skills={''}
           points={[
-            "Developed using a binary tree structure that backtracks when all questions in a branch have been asked.",
-            "Implemented persistence by reading and writing to JSON files.",
-            "Achieved 100% test coverage with JUnit to ensure program quality.",
+            'Developed using a binary tree structure that backtracks when all questions in a branch have been asked.',
+            'Implemented persistence by reading and writing to JSON files.',
+            'Achieved 100% test coverage with JUnit to ensure program quality.',
           ]}
         />
         <Project
           image={GeneticImage}
-          imageAlt={"Logo for Genetic Algorithm Visualization"}
-          title={"Genetic Algorithm Visualization By Colour"}
+          imageAlt={'Logo for Genetic Algorithm Visualization'}
+          title={'Genetic Algorithm Visualization By Colour'}
           repos={{
-            front: "https://github.com/AidenKerr/genetic-v2",
+            front: 'https://github.com/AidenKerr/genetic-v2',
           }}
-          skills={"React, Genetic Algorithms"}
+          skills={'React, Genetic Algorithms'}
           points={[
-            "Developed algorithm and designed interface to visualize how natural selection can affect populations over time.",
-            "Used custom React components as well as libraries to display the state of the population.",
+            'Developed algorithm and designed interface to visualize how natural selection can affect populations over time.',
+            'Used custom React components as well as libraries to display the state of the population.',
           ]}
         />
       </div>

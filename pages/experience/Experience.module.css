@@ -1,3 +1,8 @@
+.experiences {
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+
 .experience-title {
   display: flex;
   align-items: center;
@@ -21,13 +26,17 @@
 .experience ul {
   text-align: left;
   padding-left: 90px;
-  margin-top: 5px;
+  margin-top: 0px;
   font-size: 14px;
 }
 
 @media only screen and (max-width: 600px) {
   .experience ul {
     padding-left: 20px;
+  }
+
+  .experiences {
+    max-height: 50vh;
   }
 }
 

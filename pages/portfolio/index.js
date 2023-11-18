@@ -1,6 +1,6 @@
 import { Main } from '../../components/Main';
 import Image from 'next/image';
-import styles from './About.module.css';
+import styles from './Portfolio.module.css';
 
 import headshot from '../../public/images/headshot.jpg';
 
@@ -15,7 +15,7 @@ const Link = ({ href, title }) => (
   </a>
 );
 
-export default function About() {
+export default function Portfolio() {
   return (
     <Main>
       <Image
@@ -25,16 +25,8 @@ export default function About() {
         className={styles.headshot}
         alt="Headshot of Aiden Kerr"
       />
-      <h2>Hi. My name is Aiden Kerr.</h2>
-      <p>
-        I study Computer Science at The University of British Columbia in
-        Vancouver, British Columbia, Canada.
-      </p>
-      <p>
-        I am currently looking for internship positions. In particular, I am
-        interested in software development positions regarding computer graphics
-        and game development.
-      </p>
+      <h2>Portfolio</h2>
+      <p>This is where I will put my portfolio.</p>
       <p>
         If you would like to get in touch, feel free to contact me on{' '}
         <Link href="linkedin.com/in/aidenkerr" title="LinkedIn." />
