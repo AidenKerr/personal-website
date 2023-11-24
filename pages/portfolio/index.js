@@ -42,7 +42,7 @@ export default function Portfolio() {
               Here is a video of it in action:
             </p>
             <video width={500} controls>
-              <source src="aidenkerr.com/videos/balloonium_zap_demo.mp4" />
+              <source src="https://www.aidenkerr.com/videos/balloonium_zap_demo.mp4" />
             </video>
           </div>
         </Showcase>
