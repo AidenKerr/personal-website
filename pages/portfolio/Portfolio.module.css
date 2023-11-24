@@ -1,7 +1,22 @@
+.showcases {
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+
+.showcase {
+  text-align: left;
+}
+
 .headshot {
   border-radius: 50%;
 }
 
 .link:hover {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .showcases {
+    max-height: 50vh;
+  }
 }
