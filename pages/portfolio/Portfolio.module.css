@@ -19,4 +19,13 @@
   .showcases {
     max-height: 50vh;
   }
+
+  .showcase img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .showcase video {
+    max-width: 100%;
+  }
 }
