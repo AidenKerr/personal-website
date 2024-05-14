@@ -175,12 +175,18 @@ function Lightning({ lightningType, boltLength = 0.0, ...props }) {
     );
 }
 
-export default function LightningScene() {
+export default function LightningScene({ dimension }) {
     // TODO the Lightning component's buzz effect is kinda hacky right now because
     // I ran into issues w/ state updating. This can be revisited.
 
     return (
-        <Canvas style={{ width: 500, height: 500, background: '#24211C' }}>
+        <Canvas
+            style={{
+                width: dimension,
+                height: dimension,
+                background: '#24211C',
+            }}
+        >
             <Balloon scale={[4, 4, 1]} position={[-0.3, -0.6, 0]} />
             <Lightning
                 scale={[4, 4, 1]}
