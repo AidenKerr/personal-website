@@ -1,0 +1,23 @@
+.blog {
+  text-align: left;
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.code {
+  border-radius: 2px;
+  background-color: cornsilk;
+  color: #662700;
+  max-width: 90vw;
+  overflow-x: scroll;
+}
+
+@media only screen and (max-width: 600px) {
+  .blog {
+    max-height: 50vh;
+  }
+}

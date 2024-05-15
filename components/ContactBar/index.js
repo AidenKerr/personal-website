@@ -1,24 +1,25 @@
 import styles from './ContactBar.module.css';
+import Link from 'next/link';
 
-const Link = ({ href, title }) => (
-    <a
+const CustomLink = ({ href, title }) => (
+    <Link
         className={styles.link}
         href={`http://www.${href}`}
         target='_blank'
         rel='noreferrer'
     >
         {title}
-    </a>
+    </Link>
 );
 
 export function ContactBar() {
     return (
         <div>
-            <Link href={'linkedin.com/in/aidenkerr'} title={'LinkedIn'} />
+            <CustomLink href={'linkedin.com/in/aidenkerr'} title={'LinkedIn'} />
             {' | '}
-            <Link href='github.com/aidenkerr' title={'Github'} />
+            <CustomLink href='github.com/aidenkerr' title={'Github'} />
             {' | '}
-            <Link
+            <CustomLink
                 href='aidenkerr.com/files/Aiden_Kerr_Resume_Fall_2024.pdf'
                 title={'Resume'}
             />

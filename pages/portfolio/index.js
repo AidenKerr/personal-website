@@ -5,17 +5,7 @@ import styles from './Portfolio.module.css';
 import LightningScene from '../demos/lightningScene/Lightning';
 
 import LightningImage from '../../public/images/lightning.png';
-
-const Link = ({ href, title }) => (
-    <a
-        className={styles.link}
-        href={`http://www.${href}`}
-        target='_blank'
-        rel='noreferrer'
-    >
-        {title}
-    </a>
-);
+import Link from 'next/link';
 
 const Showcase = ({ title, children }) => (
     <div className={styles.showcase}>
@@ -34,6 +24,17 @@ export default function Portfolio() {
                         <b>Lightning Shader</b>
                         <LightningScene dimension={200} />
                         <b>^ Interactive Demo. Please Click Balloon! ^</b>
+                        <p style={{ color: 'red' }}>
+                            Note: This page is out of date. Please see the
+                            updated page{' '}
+                            <Link
+                                className={styles.link}
+                                href='/blogs/balloonium'
+                            >
+                                here.
+                            </Link>{' '}
+                            It is still here so old links work.
+                        </p>
                         <p>
                             The goal was to make a lightning effect that is
                             realistic but reasonably cartoony, and can be easily
