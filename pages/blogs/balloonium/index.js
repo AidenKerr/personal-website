@@ -48,11 +48,11 @@ export default function Balloonium() {
                     that provides a possible approach. It uses Unity Shader
                     Graph to distort a rectangle to give it a lightning-like
                     effect. Then, it applies a glow effect and finishes the
-                    effect using Unity's particle system. Our game engine did
-                    not have a shader graph feature. It also does not have any
-                    built-in glow effects, or (at the time) a particle system.
-                    However, I felt as though this general technique could still
-                    be used for a good effect
+                    effect using Unity&apos;s particle system. Our game engine
+                    did not have a shader graph feature. It also does not have
+                    any built-in glow effects, or (at the time) a particle
+                    system. However, I felt as though this general technique
+                    could still be used for a good effect
                 </p>
                 <h3>Specify Requirements</h3>
                 The requirements for this effect are:
@@ -84,17 +84,17 @@ export default function Balloonium() {
                     simply create animations for the effect. However, I wanted
                     something a little bit more dynamic and flexible. This
                     brings me to my second option &mdash; a shader effect. Since
-                    we don't have a shader graph (and anything that comes with
-                    it, like built-in noise functions, shapes, etc), we will
-                    need to implement the shader manually using OpenGL's shading
-                    language, GLSL. Like the reference video, we can create a
-                    rectangle for the lightning shape and distort it with noise.
-                    We also don't have a glowing effect, but maybe we can fake
-                    it by adding a slightly larger distorted rectangle around
-                    the lightning bolt and fading it out based on distance. At
-                    this point in time, I was not so focused on points 4 and 5,
-                    but I thought they should be achievable with some
-                    yet-to-be-formulated shader techniques.
+                    we don&apos;t have a shader graph (and anything that comes
+                    with it, like built-in noise functions, shapes, etc), we
+                    will need to implement the shader manually using
+                    OpenGL&apos;s shading language, GLSL. Like the reference
+                    video, we can create a rectangle for the lightning shape and
+                    distort it with noise. We also don&apos;t have a glowing
+                    effect, but maybe we can fake it by adding a slightly larger
+                    distorted rectangle around the lightning bolt and fading it
+                    out based on distance. At this point in time, I was not so
+                    focused on points 4 and 5, but I thought they should be
+                    achievable with some yet-to-be-formulated shader techniques.
                 </p>
                 <h3>Iteration 1</h3>
                 <b>
@@ -119,9 +119,9 @@ export default function Balloonium() {
                         this noise function by Inigo Quilez
                     </Link>{' '}
                     available online. It looks good, and has the benefit of not
-                    using any trigonometric functions that I've heard can affect
-                    performance (although this may be an optimization not worth
-                    worrying about).
+                    using any trigonometric functions that I&apos;ve heard can
+                    affect performance (although this may be an optimization not
+                    worth worrying about).
                 </p>
                 <p>
                     With this, I created my first prototype, which can be seen{' '}
@@ -132,25 +132,26 @@ export default function Balloonium() {
                     >
                         here.
                     </Link>{' '}
-                    Please check it out, as the effect doesn't translate as well
-                    in an image.
+                    Please check it out, as the effect doesn&apos;t translate as
+                    well in an image.
                 </p>
                 <Image src={Iteration1Image} height={200} />
                 <p>
-                    I create the rectangle shapes by checking the fragment's y
-                    coordinate. By adding the noise values to the fragment's
-                    coordinate before checking the y-coordinate, I am able to
-                    create the distortion effect. I will make the glow
-                    transparency a bell curve centered at the rectangle. The
-                    glow is also distorted, but to a lesser extent.
+                    I create the rectangle shapes by checking the
+                    fragment&apos;s y coordinate. By adding the noise values to
+                    the fragment&apos;s coordinate before checking the
+                    y-coordinate, I am able to create the distortion effect. I
+                    will make the glow transparency a bell curve centered at the
+                    rectangle. The glow is also distorted, but to a lesser
+                    extent.
                 </p>
                 <p>The glow strength is set by a bell curve.</p>
                 <Image src={Iteration1_desmosImage} height={100} />
                 <p>
-                    This still didn't give me the effect that I was looking for,
-                    since it did not follow the shape of the lightning enough.
-                    Next, I will try to modify the glow effect so that it
-                    follows the shape of the lightning more.
+                    This still didn&apos;t give me the effect that I was looking
+                    for, since it did not follow the shape of the lightning
+                    enough. Next, I will try to modify the glow effect so that
+                    it follows the shape of the lightning more.
                 </p>
                 <h3>Iteration 2</h3>
                 <b>
@@ -179,9 +180,9 @@ export default function Balloonium() {
                 <p>
                     This option would be okay to use if needed, but ideally I
                     would find something better. However, I also needed to find
-                    solutions to the other requirements. And that's what I look
-                    at next. In fact, taking a break from the glow actually led
-                    me to a much better and more flexible solution.
+                    solutions to the other requirements. And that&apos;s what I
+                    look at next. In fact, taking a break from the glow actually
+                    led me to a much better and more flexible solution.
                 </p>
                 <h3>Iteration 3</h3>
                 <b>
@@ -207,13 +208,13 @@ export default function Balloonium() {
                     <Image src={Iteration3_2Image} height={200} />
                 </p>
                 <p>
-                    Again, this wasn't quite what I was looking for. In this
-                    iteration, and previous ones, the area where the lightning
-                    appears seemed too rigid and geometric. I wanted something
-                    with a more interesting and controllable shape. That's when
-                    I had the idea to use a texture. And the beauty of a texture
-                    is that I can use all three of the RGB channels to hold
-                    separate information.
+                    Again, this wasn&apos;t quite what I was looking for. In
+                    this iteration, and previous ones, the area where the
+                    lightning appears seemed too rigid and geometric. I wanted
+                    something with a more interesting and controllable shape.
+                    That&apos;s when I had the idea to use a texture. And the
+                    beauty of a texture is that I can use all three of the RGB
+                    channels to hold separate information.
                 </p>
                 <b>Iteration 4</b>
                 <p>
@@ -239,9 +240,10 @@ export default function Balloonium() {
                     requirements 4 and 5.
                 </p>
                 <p>
-                    It's worth noting that the actual colour of these don't mean
-                    anything. They are just channels to store information, and
-                    can be used in the shader to create the desired effect.
+                    It&apos;s worth noting that the actual colour of these
+                    don&apos;t mean anything. They are just channels to store
+                    information, and can be used in the shader to create the
+                    desired effect.
                 </p>
                 <p>
                     Another issue I noticed in this iteration was that my
@@ -274,12 +276,12 @@ export default function Balloonium() {
                 </pre>
                 <p>
                     It starts by splitting the texture into the R, G, and B
-                    channels with the appropriate labels. Let's ignore the
+                    channels with the appropriate labels. Let&apos;s ignore the
                     thresholding part for now. The colour is set by adding the
                     constant GLOW_COLOUR with the bolt value. Since channels are
                     capped between 0.0 and 1.0, this is effectively setting the
-                    colour to be white when it's a bolt location, and the glow
-                    otherwise. Then, we set the glow strength as the alpha
+                    colour to be white when it&apos;s a bolt location, and the
+                    glow otherwise. Then, we set the glow strength as the alpha
                     (which requires glow strength 1 in the bolt locations).
                 </p>
                 <p>
@@ -292,10 +294,10 @@ export default function Balloonium() {
                     certain areas.
                 </p>
                 <p>
-                    Let's say the values in the blue channel represent a point
-                    in time, between t=0 and t=1. We can decide to only display
-                    the pixel if the current time is some distance away from the
-                    pixel's blue channel (threshold) value.
+                    Let&apos;s say the values in the blue channel represent a
+                    point in time, between t=0 and t=1. We can decide to only
+                    display the pixel if the current time is some distance away
+                    from the pixel&apos;s blue channel (threshold) value.
                 </p>
                 <p>
                     If we have a gradient of values in the blue channel such
@@ -331,8 +333,8 @@ export default function Balloonium() {
                     This is for an unsuccessful attack. Notice that the
                     unsuccessful attack is similar in shape to the fully charged
                     effect, but larger and more intense. This was to convey that
-                    something was attempted (becomes more intense) but didn't
-                    change any state (shape remains the same).
+                    something was attempted (becomes more intense) but
+                    didn&apos;t change any state (shape remains the same).
                 </p>
                 <Image src={LightningTextureOrb} height={200} />
                 <p>I also created an effect for reaching-charge.</p>
