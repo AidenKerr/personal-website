@@ -2,7 +2,9 @@ import Image from 'next/image';
 import { Main } from '../../components/Main';
 import styles from './Projects.module.css';
 import { SiGithub } from 'react-icons/si';
+import { RiExternalLinkFill } from 'react-icons/ri';
 
+import GOOpyImage from '../../public/images/gOOpy.png';
 import BallooniumImage from '../../public/images/balloonium.png';
 import BFImage from '../../public/images/bf.png';
 import RedditImage from '../../public/images/reddit.png';
@@ -59,14 +61,14 @@ const Repos = ({ repos }) => {
         <h5>
             {repos.source && (
                 <span>
-                    <Link href={repos.source}>
+                    <Link href={repos.source} target='_blank'>
                         <SiGithub /> Source Code
                     </Link>{' '}
                 </span>
             )}
             {repos.front && (
                 <span>
-                    <Link href={repos.front}>
+                    <Link href={repos.front} target='_blank'>
                         <SiGithub /> Frontend
                     </Link>{' '}
                 </span>
@@ -74,9 +76,17 @@ const Repos = ({ repos }) => {
             {repos.back && (
                 <span>
                     |{' '}
-                    <Link href={repos.back}>
+                    <Link href={repos.back} target='_blank'>
                         <SiGithub /> Backend
                     </Link>{' '}
+                </span>
+            )}
+            {repos.link && (
+                <span>
+                    |{''}
+                    <Link href={repos.link} target='_blank'>
+                        <RiExternalLinkFill /> Link
+                    </Link>
                 </span>
             )}
         </h5>
@@ -87,6 +97,22 @@ export default function Projects() {
     return (
         <Main>
             <div className={styles.projects}>
+                <Project
+                    image={GOOpyImage}
+                    imageAlt={'Logo for BF'}
+                    title={'gOOpy - 3D Raymarching Scene Editor'}
+                    repos={{
+                        source: 'https://github.com/ubc-cpsc455-2024S/gOOpy',
+                        link: 'https://goopy-frontend.onrender.com/',
+                    }}
+                    skills={'ThreeJS, GLSL, React, Node, Express.js, MongoDB'}
+                    points={[
+                        'Created a 3D scene editor with React / Three.js allowing users to create, save, and share their creations.',
+                        'Implemented backend with Node and Express, using a NoSQL MongoDB database to store scene and user info.',
+                        'Implemented raymarching in GLSL using signed distance functions, allowing for "goopy" shape interactions.',
+                        'Calculated surface normals using gradients of the signed distance functions with central differences to implement Blinn-Phong lighting.',
+                    ]}
+                />
                 <Project
                     image={BFImage}
                     imageAlt={'Logo for BF'}
