@@ -107,7 +107,7 @@ export default function Projects() {
                     }}
                     skills={'ThreeJS, GLSL, React, Node, Express.js, MongoDB'}
                     points={[
-                        'Created a 3D scene editor with React / Three.js allowing users to create, save, and share their creations.',
+                        'Created a 3D scene editor with React / Three.js allowing users to create, save, and share their creations. ',
                         'Implemented backend with Node and Express, using a NoSQL MongoDB database to store scene and user info.',
                         'Implemented raymarching in GLSL using signed distance functions, allowing for "goopy" shape interactions.',
                         'Calculated surface normals using gradients of the signed distance functions with central differences to implement Blinn-Phong lighting.',
