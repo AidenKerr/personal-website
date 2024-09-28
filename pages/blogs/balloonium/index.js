@@ -36,7 +36,7 @@ export default function Balloonium() {
                     Further, this needs to be implemented in a custom C++ /
                     OpenGL game engine with few extra features.
                 </p>
-                <h3>Background Reshearch</h3>
+                <h3>Background Research</h3>
                 <p>
                     I found{' '}
                     <Link
