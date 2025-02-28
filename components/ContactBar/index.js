@@ -20,7 +20,7 @@ export function ContactBar() {
             <CustomLink href='github.com/aidenkerr' title={'Github'} />
             {' | '}
             <CustomLink
-                href='aidenkerr.com/files/Aiden_Kerr_Resume_Fall_2024.pdf'
+                href='aidenkerr.com/files/Aiden_Kerr_Resume_New_Grad.pdf'
                 title={'Resume'}
             />
         </div>
